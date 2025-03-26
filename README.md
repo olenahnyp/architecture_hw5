@@ -16,8 +16,6 @@ The application is containerized using Docker and includes token-based authentic
 
 ### How to run the application
 
-🔻 [ EXAMPLE BELOW – modify as per your needs ] 🔻
-
 1. Clone the repository.
 2. Start the application using Docker: **docker-compose up --build**.
 3. The services will be available at:
