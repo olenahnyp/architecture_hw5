@@ -52,7 +52,7 @@ def get_rating(song: str, authorization: str = Header(None)):
 
     response = requests.get(f"{DB_SERVICE_URL}/rating/{song}")
     response_json = response.json()
-    
+
     if response_json["rating"] == 0:
         return "This song is not rated yet."
     return response.json()
@@ -68,4 +68,5 @@ def get_all_songs(authorization: str = Header(None)):
 
 @app.get("/health")
 def health_check():
+    """Status check."""
     return {"status": "ok"}

@@ -15,7 +15,6 @@ def read_root():
 @app.get("/songs/{album}")
 def get_songs(album: str):
     """Fetch songs from an album using OpenRouter API."""
-    
     completion = client.chat.completions.create(
     extra_body={},
     model="openai/gpt-3.5-turbo-0613",
@@ -32,4 +31,5 @@ def get_songs(album: str):
 
 @app.get("/health")
 def health_check():
+    """Status check."""
     return {"status": "ok"}

@@ -14,10 +14,10 @@ def rate_song(song: str, rating: int):
     if rating == 0:
         db[song] = rating
         return {"song": song, "rating": rating}
-    
+
     if rating < 1 or rating > 5:
         raise HTTPException(status_code=400, detail="Rating must be between 1 and 5.")
-    
+
     db[song] = rating
     return {"song": song, "rating": rating}
 
@@ -26,7 +26,7 @@ def get_rating(song: str):
     """Retrieves stored rating for a song."""
     if song not in db:
         raise HTTPException(status_code=404, detail="There is no such song in database.")
-    
+
     return {"song": song, "rating": db[song]}
 
 @app.get("/all-songs")
@@ -39,4 +39,5 @@ def get_all_songs():
 
 @app.get("/health")
 def health_check():
+    """Status check."""
     return {"status": "ok"}
