@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  business_service:
+    build:
+      context: .
+      dockerfile: Dockerfile.business
+    ports:
+      - "8002:8002"
+    environment:
+      - OPENAI_API_KEY="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"
+
+  db_service:
+    build:
+      context: .
+      dockerfile: Dockerfile.db
+    ports:
+      - "8001:8001"
+
+  client_service:
+    build:
+      context: .
+      dockerfile: Dockerfile.client
+    ports:
+      - "8000:8000"
+    depends_on:
+      - business_service
+      - db_service
