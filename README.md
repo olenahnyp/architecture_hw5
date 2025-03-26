@@ -1,4 +1,4 @@
-# Homework 5: 💻 Development of a basic REST-based application with Token authentication
+# Homework 5: ⭐️ Development of a basic REST-based application with Token authentication
 
 Author: **Olena Hnyp**
 
@@ -54,6 +54,6 @@ As we can see, everything works fine. We just rated a song from the album folklo
 
 ![test5](images/test5.png)
 
-6. Also, I test how it works if a user enter wrong token to authorize. It returns an error.
+6. Also, I tested how it works if a user enter wrong token to authorize. It returns an error.
 
 ![test6](images/test6.png)
