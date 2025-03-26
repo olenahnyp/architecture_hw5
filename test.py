@@ -5,7 +5,7 @@ TOKEN = "Bearer SuperSecretToken"
 HEADERS = {"Authorization": TOKEN}
 
 # Test 1: Add an album
-album = "reputation"
+album = "folklore"
 album_url = f"{BASE_URL}/add-album/{album}"
 
 print(f"Sending request to add album: {album}")
@@ -16,7 +16,7 @@ print("Response:", response.text)
 print("-" * 50)
 
 # Test 2: Get rating for a song
-song = "Delicate"
+song = "mirrorball"
 rating_url = f"{BASE_URL}/get-rating/{song}"
 
 print(f"Sending request to get rating for song: {song}")
@@ -39,7 +39,7 @@ except requests.exceptions.JSONDecodeError:
 print("-" * 50)
 
 # Test 3: Rate a song
-song_to_rate = "Delicate"
+song_to_rate = "mirrorball"
 rating_value = 5
 rate_song_url = f"{BASE_URL}/rate-song/{song_to_rate}"
 
@@ -57,7 +57,7 @@ except requests.exceptions.JSONDecodeError:
 print("-" * 50)
 
 # Test 4: Get rating for a song
-song = "Delicate"
+song = "mirrorball"
 rating_url = f"{BASE_URL}/get-rating/{song}"
 
 print(f"Sending request to get rating for song: {song}")

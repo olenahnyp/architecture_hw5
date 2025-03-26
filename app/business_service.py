@@ -5,7 +5,7 @@ app = FastAPI()
 
 client = OpenAI(
   base_url="https://openrouter.ai/api/v1",
-  api_key="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",
+  api_key="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",
 )
 
 @app.get("/")

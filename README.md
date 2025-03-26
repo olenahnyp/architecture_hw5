@@ -23,6 +23,10 @@ The application is containerized using Docker and includes token-based authentic
 - Database Service: http://localhost:8001
 - Client Service: http://localhost:8000
 
+P.S. You can start the applications in your terminal as well. Go to the folder app and run each service separately:
+- uvicorn business_service:app --host 0.0.0.0 --port 8002
+- uvicorn db_service:app --host 0.0.0.0 --port 8001
+- uvicorn client_service:app --host 0.0.0.0 --port 8000
 
 ### Results
 

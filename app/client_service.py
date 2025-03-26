@@ -31,7 +31,7 @@ def get_songs(album: str, authorization: str = Header(None)):
             for song in songs:
                 result = rate_song(song, 0, authorization)
                 print(result)
-        return f"{album} was added to your Taylor Swift playlist!"
+            return f"{album} was added to your Taylor Swift playlist!"
     else:
         return "Such an album does not exist. Try again :("
 
