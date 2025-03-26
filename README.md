@@ -6,11 +6,9 @@ Author: **Olena Hnyp**
 
 This project consists of a REST-based application implemented using FastAPI. It includes three microservices:
 
-Business Service - fetches song lists from Taylor Swift albums using OpenRouter AI.
-
-Database Service - stores and retrieves songs that a user added to a playlist.
-
-Client Service - acts as an intermediary for adding albums, rating songs, and fetching ratings.
+- Business service (**business_service.py**) - fetches song lists from Taylor Swift albums using OpenRouter AI.
+- Database service (**db_service.py**) - stores and retrieves songs that a user added to a playlist.
+- Client service (**client_service.py**) - acts as an intermediary for adding albums, rating songs, and fetching ratings.
 
 The application is containerized using Docker and includes token-based authentication for secure access.
 
